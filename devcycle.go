@@ -19,7 +19,7 @@ func initalizeDevCycle() *devcycle.Client {
 	options := devcycle.Options{
 		EnableEdgeDB:                 false,
 		EnableCloudBucketing:         false,
-		EventFlushIntervalMS:         30 * time.Second,
+		EventFlushIntervalMS:         5 * time.Second,
 		ConfigPollingIntervalMS:      5 * time.Second,
 		RequestTimeout:               30 * time.Second,
 		DisableAutomaticEventLogging: false,
