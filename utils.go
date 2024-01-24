@@ -85,5 +85,5 @@ func addColor(text string, color string) string {
 
 func writeToConsole(frame string, color string) {
 	frame = addColor(frame, color)
-	os.Stdout.Write([]byte("\r\x1b[K" + frame))
+	os.Stdout.Write([]byte("\x1b[K  " + frame + "\r"))
 }
