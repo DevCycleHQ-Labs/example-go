@@ -4,6 +4,7 @@ import (
 	"log"
 	"os"
 	"time"
+
 	devcycle "github.com/devcyclehq/go-server-sdk/v2"
 )
 
@@ -17,13 +18,9 @@ func initalizeDevCycle() *devcycle.Client {
 	}
 
 	options := devcycle.Options{
-		EnableEdgeDB:                 false,
-		EnableCloudBucketing:         false,
-		EventFlushIntervalMS:         5 * time.Second,
-		ConfigPollingIntervalMS:      5 * time.Second,
-		RequestTimeout:               30 * time.Second,
-		DisableAutomaticEventLogging: false,
-		DisableCustomEventLogging:    false,
+		EventFlushIntervalMS:    5 * time.Second,
+		ConfigPollingIntervalMS: 30 * time.Second,
+		RequestTimeout:          30 * time.Second,
 	}
 
 	devcycleClient, err := devcycle.NewClient(sdkKey, &options)
